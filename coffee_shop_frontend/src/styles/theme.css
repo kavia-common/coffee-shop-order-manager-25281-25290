@@ -111,6 +111,45 @@ body { background: var(--bg); color: var(--text); margin: 0; }
   outline-offset: 2px;
 }
 
+/* Responsive embed helpers */
+.embed-shell {
+  position: relative;
+  max-width: 100vw;
+  padding: 12px;
+  overflow: auto; /* allow vertical scroll if embedded page grows */
+  margin: 0 auto;
+  background: var(--bg);
+}
+
+.iframe-fluid {
+  display: block;
+  width: 100%;
+  height: auto; /* we will set exact pixel height inline via JS */
+  border: 0;
+  background: transparent;
+}
+
+.scaled-wrapper {
+  position: relative;
+  transform-origin: top left;
+  margin: 0 auto;
+  /* Prevent horizontal overflow when scaled down */
+  will-change: transform;
+}
+
+/* Breakpoints to keep padding modest on smaller screens */
+@media (max-width: 768px) {
+  .embed-shell {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .embed-shell {
+    padding: 6px;
+  }
+}
+
 /* Small screens */
 @media (max-width: 640px) {
   .topbar__inner {

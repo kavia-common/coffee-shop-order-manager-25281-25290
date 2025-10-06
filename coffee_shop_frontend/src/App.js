@@ -30,6 +30,7 @@ export default function App() {
             <NavLink className="nav__link" to="/license">License</NavLink>
             <NavLink className="nav__link" to="/product-feedback">Product Feedback</NavLink>
             <NavLink className="nav__link" to="/onboarding">Onboarding</NavLink>
+            <NavLink className="nav__link" to="/order">Order</NavLink>
             <NavLink className="nav__link" to="/note">Note</NavLink>
           </nav>
         </div>
@@ -38,11 +39,30 @@ export default function App() {
       <main id="main" className="content" role="main">
         <Routes>
           <Route path="/" element={<Navigate to="/about-me" replace />} />
-          <Route path="/about-me" element={<HtmlEmbedPage src="/assets/about-me-442-3.html" headerOffset={72} />} />
-          <Route path="/license" element={<HtmlEmbedPage src="/assets/license-442-36.html" headerOffset={72} />} />
-          <Route path="/product-feedback" element={<HtmlEmbedPage src="/assets/product-feedback-442-132.html" headerOffset={72} />} />
-          <Route path="/onboarding" element={<HtmlEmbedPage src="/assets/highfidelity-onboarding-421-1221.html" headerOffset={72} />} />
-          <Route path="/note" element={<HtmlEmbedPage src="/assets/note-442-87.html" headerOffset={72} />} />
+          <Route
+            path="/about-me"
+            element={<HtmlEmbedPage title="About Me" src="/assets/about-me-442-3.html" headerOffset={72} />}
+          />
+          <Route
+            path="/license"
+            element={<HtmlEmbedPage title="License" src="/assets/license-442-36.html" headerOffset={72} />}
+          />
+          <Route
+            path="/product-feedback"
+            element={<HtmlEmbedPage title="Product Feedback" src="/assets/product-feedback-442-132.html" headerOffset={72} />}
+          />
+          <Route
+            path="/onboarding"
+            element={<HtmlEmbedPage title="High-Fidelity Onboarding" src="/assets/highfidelity-onboarding-421-1221.html" headerOffset={72} />}
+          />
+          <Route
+            path="/order"
+            element={<HtmlEmbedPage title="High-Fidelity Order" src="/assets/highfidelity-order-421-2004.html" headerOffset={72} />}
+          />
+          <Route
+            path="/note"
+            element={<HtmlEmbedPage title="Note" src="/assets/note-442-87.html" headerOffset={72} />}
+          />
           <Route path="*" element={<Navigate to="/about-me" replace />} />
         </Routes>
       </main>
