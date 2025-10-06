@@ -1,0 +1,341 @@
+:root{
+  /* Ocean Professional theme (used for non-Figma specific neutrals only) */
+  --primary:#2563EB;
+  --secondary:#F59E0B;
+  --bg:#f9fafb;
+  --surface:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+
+  --shadow: 0 10px 24px rgba(17,24,39,0.08);
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Root container for scaling */
+#note-root{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:24px;
+}
+
+/* Artboard: 1333 x 998 (JSON) */
+.artboard{
+  position:relative;
+  width:1333px;
+  height:998px;
+  background:#ffffff; /* background color_ref color_ffffff */
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transform-origin: top left;
+}
+
+/* Top stripe (id 442:131) x:0, y:0, w:1333, h:8 style_119 */
+.stripe{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1333px;
+  height:8px;
+  background:#2563EB; /* Using primary as stripe - consistent with other screens */
+}
+
+/* Studio Name (id 442:124) x:112, y:100, w:1109, h:24 */
+.studio-row{
+  position:absolute;
+  left:112px;
+  top:100px;
+  width:1109px;
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.studio-left{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.studio-text{
+  font-size:14px;   /* typo_97 -> 22px height block */
+  line-height:22px;
+  color:#111827;
+  font-weight:500;
+}
+.studio-arrow{
+  width:24px;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.arrow-img{
+  width:11.995px;     /* from JSON width 11.995012283325195 */
+  height:12.0099px;   /* from JSON height 12.0098876953125 */
+}
+
+/* Headline & Logo (id 442:119) x:112, y:196, w:1109, h:122 */
+.headline-logo{
+  position:absolute;
+  left:112px;
+  top:196px;
+  width:1109px;
+  height:122px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:24px;
+}
+.headline-texts{
+  width:710px;
+  height:122px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.headline-title{
+  margin:0;
+  width:102px;      /* JSON width for "Notes" text box */
+  height:60px;      /* JSON height */
+  font-weight:800;
+  font-size:48px;   /* fits 60px block */
+  line-height:60px;
+  letter-spacing:-0.02em;
+  color:#111827;
+}
+.headline-body{
+  margin:0;
+  width:710px;      /* JSON width */
+  height:54px;      /* JSON height */
+  font-size:16px;   /* typo_100 -> 27 line-height */
+  line-height:27px;
+  color:#374151;
+}
+.headline-logo-wrap{
+  width:84px;
+  height:84px;
+  margin-top:19px; /* y:215 - 196 = 19 */
+  flex:0 0 auto;
+}
+.headline-logo-img{
+  width:84px;
+  height:84px;
+  display:block;
+  border-radius:16px; /* style_126 likely rounded */
+}
+
+/* Follow Us (id 442:94) x:112, y:382, w:710, h:352 */
+.follow{
+  position:absolute;
+  left:112px;
+  top:382px;
+  width:710px;
+  height:352px;
+  display:flex;
+  flex-direction:column;
+  gap:16px; /* layout vertical between text and social rows */
+}
+
+/* Text (id 442:95) x:112, y:382, w:710, h:74 -> inside follow: top:0 */
+.follow-text{
+  position:relative;
+  width:710px;
+  height:74px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.follow-title{
+  margin:0;
+  width:108px;  /* JSON width */
+  height:31px;  /* JSON height */
+  font-size:24px; /* typo_99 */
+  line-height:31px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  color:#111827;
+}
+.follow-subtitle{
+  margin:0;
+  width:710px;  /* JSON width */
+  height:27px;  /* JSON height */
+  font-size:16px; /* typo_100 */
+  line-height:27px;
+  color:#4b5563;
+}
+
+/* Social Media (id 442:98) x:112, y:500, w:565, h:234 -> inside follow: top: 500 - 382 = 118 */
+.social{
+  position:absolute;
+  left:0px;
+  top:118px;
+  width:565px;
+  height:234px;
+  display:flex;
+  flex-direction:column;
+  gap:32px; /* spacing between Instagram and YouTube rows */
+}
+
+/* Each social row: (id 442:99) and (id 442:109) */
+.social-row{
+  position:relative;
+  width:565px;
+  height:101px; /* JSON height */
+  display:flex;
+  align-items:flex-start;
+}
+
+/* Social icon column (id 442:100 / id 442:110) 79 x 79 positioned with inner 50 x 50 at exact offsets */
+.social-icon{
+  position:relative;
+  width:79px;
+  height:79px;
+  margin-top:11px;   /* inner frame y:511 - row y:500 = 11 (for IG); same for YT 644 - 633 = 11 */
+  flex:0 0 79px;
+}
+.social-icon-inner{
+  position:absolute;
+  left:15px;  /* 127 - 112 = 15 within page; but within row, we align so that inner is 50x50 centered with margin approximated via exact offsets below */
+  top:15px;   /* 526 - 511 = 15 for IG, 659 - 644 = 15 for YT */
+  width:50px;
+  height:50px;
+}
+.icon-bg{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  display:block;
+}
+.icon-fg{
+  position:absolute;
+  left:12.03125px;    /* JSON x: 139.03125 - 127 = 12.03125 within inner */
+  top:12.03125px;     /* JSON y: 538.03125 - 526 = 12.03125 */
+  width:25.9375px;
+  height:25.9375px;
+  display:block;
+}
+.icon-bg-red{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  display:block;
+  border-radius:12px;
+  background:#FF0000;  /* style_118 (bg) approximated red for YouTube container */
+}
+.icon-fg-youtube{
+  position:absolute;
+  left:12.5px;  /* JSON 139.5 - 127 = 12.5 */
+  top:16.25px;  /* JSON 675.25 - 659 = 16.25 */
+  width:25px;
+  height:17.5px;
+  display:block;
+}
+
+/* Social detail column (id 442:104 / id 442:114) w:462, h:101 */
+.social-detail{
+  position:absolute;
+  left:103px; /* 215 - 112 = 103 */
+  top:0px;    /* align to row top */
+  width:462px;
+  height:101px;
+  display:flex;
+  flex-direction:column;
+}
+.social-title-row{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:140px; /* IG title block width; YT block is 122px, row sizing OK */
+  height:29px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.social-title{
+  font-size:20px;    /* typo_101 */
+  line-height:29px;
+  font-weight:700;
+  color:#111827;
+}
+.social-emoji{
+  font-size:20px;
+  line-height:24px;
+}
+.social-desc{
+  position:absolute;
+  left:0px;
+  top:53px; /* For IG: 553 - 500 = 53; For YT JSON shows y:686 - 633 = 53 */
+  width:462px;
+  height:48px;
+  margin:0;
+  font-size:16px;    /* typo_102 */
+  line-height:24px;
+  color:#111827;
+  font-weight:500;
+}
+
+/* Hero image container (id 442:92 -> 442:93) x:685, y:350, w:576, h:576 */
+.hero-figure{
+  position:absolute;
+  left:685px;
+  top:350px;
+  width:576px;
+  height:576px;
+  margin:0;
+}
+.hero-image{
+  width:576px;
+  height:576px;
+  display:block;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+
+/* Created by (id 442:88) x:112, y:902, w:254, h:24 */
+.created-by{
+  position:absolute;
+  left:112px;
+  top:902px;
+  width:auto;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#111827;
+}
+.created-text{
+  font-size:14px;
+  line-height:22px;
+  color:#111827;
+}
+.created-heart{
+  font-size:18px;
+  line-height:24px;
+}
+
+/* Focus styles for accessibility */
+:focus-visible{
+  outline:2px solid var(--secondary);
+  outline-offset:2px;
+}
+
+/* Scale padding adjust */
+@media (max-width: 1400px){
+  #note-root{ padding:16px; }
+}

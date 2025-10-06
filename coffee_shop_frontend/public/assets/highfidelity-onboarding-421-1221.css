@@ -1,0 +1,296 @@
+:root{
+  /* Ocean Professional theme (used only where neutral, no override of Figma-specific values) */
+  --primary:#2563EB;
+  --secondary:#F59E0B;
+  --bg:#f9fafb;
+  --surface:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+
+  --shadow-soft: 0 12px 28px rgba(17,24,39,0.12);
+  --shadow-subtle: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Root container for scaling */
+#onboarding-root{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:24px;
+}
+
+/* Artboard strictly matches Figma 375 x 812 */
+.artboard{
+  position:relative;
+  width:375px;
+  height:812px;
+  background:#ffffff;             /* JSON background color_ref color_f9f9f9 approximated white */
+  border-radius:24px;
+  box-shadow: var(--shadow-subtle);
+  overflow:hidden;
+  transform-origin: top left;     /* Scaling origin */
+}
+
+/* Image Onboarding frame (id 421:1222) at x:0, y:0, w:375, h:536 */
+.image-onboarding{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:375px;
+  height:536px;
+  overflow:hidden;
+}
+
+/* Image child (id 421:1223 -> rect I421:1223;417:719) at x:-47, y:-166, w:468, h:702 */
+.image-coffee{
+  position:absolute;
+  left:-47px;
+  top:-166px;
+  width:468px;
+  height:702px;
+  object-fit:cover;
+  display:block;
+  user-select:none;
+  -webkit-user-drag: none;
+}
+
+/* Bottom Container (id 421:1224) at x:0, y:452, w:375, h:360 */
+.bottom-container{
+  position:absolute;
+  left:0px;
+  top:452px;
+  width:375px;
+  height:360px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,1)); /* subtle elevation */
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.06); /* Shadow Container (421:1225) approximation */
+  border-top-left-radius:24px;
+  border-top-right-radius:24px;
+}
+
+/* Text frame (id 421:1228) at x:24, y:476, w:327, h:194 */
+.text-block{
+  position:absolute;
+  left:24px;
+  top:24px;              /* relative to bottom-container top: 476 - 452 = 24 */
+  width:327px;
+  height:194px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* Title (id 421:1229) x:24, y:476, w:327, h:144 typography_ref typo_95 */
+.title{
+  margin:0;
+  width:327px;
+  height:144px;
+  font-weight:800;
+  font-size:32px;        /* sized to fit 144px block with multi-line; adjust line-height for fidelity */
+  line-height:48px;      /* 3 lines x 48 = 144 */
+  letter-spacing:-0.02em;
+  color:#111827;
+}
+
+/* Subtitle (id 421:1230) x:24, y:628, w:327, h:42 typography_ref typo_96 */
+.subtitle{
+  margin:0;
+  width:327px;
+  height:42px;
+  font-size:14px;        /* 14px with 21px line-height to fit 42px */
+  line-height:21px;
+  color:#4b5563;
+}
+
+/* Button (id 421:1226) x:24, y:702, w:327, h:56 with text center (id 421:1227) */
+.cta{
+  position:absolute;
+  left:24px;
+  top:250px;             /* relative y inside bottom-container: 702 - 452 = 250 */
+  width:327px;
+  height:56px;
+  border:none;
+  border-radius:16px;
+  background:#111827;    /* dark button as typical onboarding primary (style_64 proxy) */
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: var(--shadow-soft);
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.cta:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(17,24,39,0.16);
+  opacity:0.98;
+}
+
+.cta:active{
+  transform: translateY(0px);
+}
+
+.cta:focus-visible{
+  outline:2px solid var(--secondary);
+  outline-offset:2px;
+}
+
+/* Button text (id 421:1227) x:139.5, y:718, w:96, h:24 style_5 typo_72 */
+.cta-text{
+  display:inline-block;
+  font-weight:700;
+  font-size:16px;
+  line-height:24px;
+  letter-spacing:0;
+}
+
+/* Home Indicator (id 421:1231) at x:0, y:778, w:375, h:34; child bar at x:121, y:799, w:134, h:5 */
+.home-indicator{
+  position:absolute;
+  left:0px;
+  top:778px;
+  width:375px;
+  height:34px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  pointer-events:none;
+}
+
+.home-indicator-bar{
+  width:134px;
+  height:5px;
+  border-radius:3px;
+  background:#0B0B0B; /* style_75 approximation */
+  margin-bottom:6px;   /* align to y within the 34px area */
+  opacity:0.8;
+}
+
+/* Status Bar (id 421:1232) at x:0, y:0, w:375, h:44 */
+.status-bar{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:375px;
+  height:44px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:0;               /* remove padding to align absolute coords to Figma */
+  pointer-events:none; /* decorative */
+}
+
+/* Left Side (I421:1232;417:346 -> Time group) x:12, y:12, w:52, h:21 */
+.status-left{
+  position:relative;
+  width:52px;
+  height:21px;
+  margin-left:12px;  /* align group to x:12 */
+  margin-top:12px;   /* align group to y:12 */
+}
+
+.time-icon{
+  position:absolute;
+  left:24px;  /* JSON x for the icon within page, but relative to artboard; within group we offset so the image sits correctly */
+  top:16px;
+  width:28px; /* JSON width */
+  height:12px;
+  object-fit:contain;
+}
+
+/* Right Side (I421:1232;417:330) x:283.67, y:17.33, w:66.66, h:11.33 */
+.status-right{
+  position:relative;
+  width:66.661px;     /* match JSON width */
+  height:11.336px;    /* match JSON height */
+  margin-top:17.33px; /* align to JSON y since parent has no padding now */
+  margin-right:0;     /* no extra offset on the right */
+}
+
+/* Battery rectangle graphic from imagePath (I421:1232;417:332) is placed via img */
+/* Additional vector parts simulated to match components positioning */
+.battery-rect{
+  position:absolute;
+  left:43px;    /* 326 -> relative: 326 - 283.67 ≈ 42.33, rounded */
+  top:0px;
+  width:22px;
+  height:11.33px;
+  object-fit:contain;
+  opacity:0.95;
+}
+.battery-cap{
+  position:absolute;
+  left:66px;    /* 349 - 283 ≈ 66 */
+  top:3.7px;    /* y: ~21 - 17.33 ≈ 3.67 */
+  width:1.33px;
+  height:4px;
+  background:#111827;
+  border-radius:1px;
+  opacity:0.9;
+}
+.battery-fill{
+  position:absolute;
+  left:45px;  /* 328 - 283.67 ≈ 44.3 */
+  top:2px;    /* 19.33 - 17.33 = 2 */
+  width:18px;
+  height:7.33px;
+  background:#111827;
+  border-radius:1.5px;
+}
+
+/* Wifi (3 arcs) positions relative to right group per JSON */
+.wifi{
+  position:absolute;
+  border:2px solid #111827;
+  border-color:#111827 transparent transparent transparent;
+  border-radius:50%;
+  opacity:0.9;
+}
+.wifi-1{
+  left:22px;  /* 305.69 - 283.67 ≈ 22.02 */
+  top:0px;
+  width:16px; height:16px;
+}
+.wifi-2{
+  left:25px; top:3px;
+  width:12px; height:12px;
+}
+.wifi-3{
+  left:28px; top:6px;
+  width:8px; height:8px;
+}
+
+/* Mobile signal bars (4) */
+.cell{
+  position:absolute;
+  width:3px;
+  background:#111827;
+  opacity:0.9;
+  bottom:0;
+}
+.cell-1{ left:0px; height:4px; }
+.cell-2{ left:6px; height:6px; }
+.cell-3{ left:12px; height:8.33px; }
+.cell-4{ left:18px; height:10.67px; }
+
+/* Focus-visible for keyboard users (accessibility) */
+:focus-visible{
+  outline:2px solid var(--secondary);
+  outline-offset:2px;
+}
+
+/* Small view padding adjust (scaling manages overall responsiveness) */
+@media (max-width: 480px){
+  #onboarding-root{ padding:16px; }
+}

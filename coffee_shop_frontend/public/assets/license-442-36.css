@@ -1,0 +1,349 @@
+:root{
+  /* Ocean Professional theme */
+  --primary:#2563EB;
+  --secondary:#F59E0B;
+  --success:#F59E0B;
+  --error:#EF4444;
+  --bg:#f9fafb;
+  --surface:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --shadow:0 10px 24px rgba(17,24,39,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Root container for scaling */
+#license-root{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:24px;
+}
+
+/* Artboard: 1333 x 998 */
+.artboard{
+  position:relative;
+  width:1333px;
+  height:998px;
+  background:#ffffff;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transform-origin: top left;
+}
+
+/* Top stripe (id 442:86) */
+.stripe{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1333px;
+  height:8px;
+  background:var(--primary);
+}
+
+/* Studio Name (id 442:79) x:112, y:100, w:1109, h:24 */
+.studio-row{
+  position:absolute;
+  left:112px;
+  top:100px;
+  width:1109px;
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.studio-left{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.studio-text{
+  font-size:14px;         /* matches 22px bounding height typical */
+  line-height:22px;
+  color:#111827;
+  font-weight:500;
+}
+.studio-arrow{
+  width:24px;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.arrow-img{
+  width:12px;              /* from JSON width ~11.995 */
+  height:12.01px;          /* from JSON height ~12.01 */
+}
+
+/* Headline & Logo (id 442:74) x:112, y:196, w:1109, h:95 */
+.headline-logo{
+  position:absolute;
+  left:112px;
+  top:196px;
+  width:1109px;
+  height:95px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:24px;
+}
+.headline-texts{
+  width:710px;
+  height:95px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.headline-title{
+  margin:0;
+  width:624px;             /* JSON width */
+  height:60px;             /* JSON height */
+  font-weight:800;
+  font-size:48px;          /* Approximating 60px box height */
+  line-height:60px;
+  letter-spacing:-0.02em;
+  color:#111827;
+}
+.headline-body{
+  margin:0;
+  width:710px;             /* JSON width */
+  height:27px;             /* JSON height */
+  font-size:16px;          /* typo_100 scale */
+  line-height:27px;
+  color:#374151;
+}
+.headline-logo-wrap{
+  width:84px;
+  height:84px;
+  margin-top:5.5px;        /* top 201.5 - 196 = 5.5 offset to align within section */
+  flex:0 0 auto;
+}
+.headline-logo-img{
+  width:84px;
+  height:84px;
+  display:block;
+  border-radius:16px;
+}
+
+/* Detail Agreement (id 442:43) x:112, y:355, w:750, h:384 */
+.detail-agreement{
+  position:absolute;
+  left:112px;
+  top:355px;
+  width:750px;
+  height:384px;
+  display:flex;
+  flex-direction:column;
+}
+.detail-text{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:710px;
+  height:74px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.agreement-title{
+  margin:0;
+  width:224px;             /* JSON width */
+  height:31px;             /* JSON height */
+  font-size:24px;          /* matches title weight (typo_99) */
+  line-height:31px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  color:#111827;
+}
+.agreement-subtitle{
+  margin:0;
+  width:710px;
+  height:27px;
+  font-size:16px;          /* typo_100 */
+  line-height:27px;
+  color:#4b5563;
+}
+
+/* Points container (id 442:47) x:112,y:473 within page; relative top inside section = 473 - 355 = 118 */
+.detail-points{
+  position:absolute;
+  left:0px;
+  top:118px;
+  width:750px;
+  height:266px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* You can (id 442:48) height 117 */
+.points-section{
+  display:flex;
+  flex-direction:column;
+}
+.you-can{
+  position:absolute;
+  left:0;
+  top:0;
+  width:750px;
+  height:117px;
+}
+.points-title-row{
+  position:absolute;
+  left:0;
+  top:0;
+  width:113px; /* You can title region width */
+  height:29px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.points-title{
+  margin:0;
+  font-size:20px;         /* typo_101 */
+  line-height:29px;
+  font-weight:700;
+  color:#111827;
+}
+.points-emoji{
+  font-size:20px;
+  line-height:24px;
+}
+
+/* Point group for 'You can' list (id 442:52) positioned at y:526 relative to page => within section top: 526 - 473 = 53 */
+.you-can .point-row:nth-of-type(1){
+  position:absolute;
+  left:0;
+  top:53px;                /* align to y:526 */
+}
+.you-can .point-row:nth-of-type(2){
+  position:absolute;
+  left:0;
+  top:93px;                /* y:566 => 566 - 473 = 93 */
+}
+
+/* Generic point row: width 750, height 24, with icon at 24x24 and text width 710 starting at x:152 from page => 40px gap from icon */
+.point-row{
+  width:750px;
+  height:24px;
+  display:flex;
+  align-items:center;
+}
+.point-icon{
+  width:24px;
+  height:24px;
+  display:block;
+  margin-left:0;          /* page x:112 baseline already handled by container left */
+}
+.point-text{
+  margin:0;
+  padding:0;
+  margin-left:40px;       /* from icon x:112 to text x:152 difference */
+  width:710px;
+  height:24px;
+  font-size:16px;         /* typo_102 */
+  line-height:24px;
+  color:#111827;
+  font-weight:500;
+}
+
+/* You can't (id 442:59) top relative to section: page y 622 -> 622 - 473 = 149 */
+.you-cant{
+  position:absolute;
+  left:0;
+  top:149px;
+  width:750px;
+  height:117px;
+}
+.you-cant .points-title-row{
+  left:0;
+  top:0;
+  width:131px;
+}
+.point-icon-x{
+  width:24px;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;     /* style_114 approx */
+  background:#F3F4F6;    /* subtle bg to mimic container */
+}
+.point-icon-x-img{
+  width:8px;
+  height:8px;
+}
+
+/* 'You can't' individual rows: (id 442:64 at page y:675 => 675 - 622 = 53 inside section), (id 442:69 at y:715 => 93) */
+.you-cant .point-row:nth-of-type(1){
+  position:absolute;
+  left:0;
+  top:53px;
+}
+.you-cant .point-row:nth-of-type(2){
+  position:absolute;
+  left:0;
+  top:93px;
+}
+
+/* Hero image (id 442:41 -> 442:42) x:693, y:350, w:576, h:576 (JSON frame shows x:693; screenshot CSS in other screen used 709; here use 693 as JSON) */
+.hero-figure{
+  position:absolute;
+  left:693px;
+  top:350px;
+  width:576px;
+  height:576px;
+  margin:0;
+}
+.hero-image{
+  width:576px;
+  height:576px;
+  display:block;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+
+/* Created by (id 442:37) x:112, y:902, w:254, h:24 */
+.created-by{
+  position:absolute;
+  left:112px;
+  top:902px;
+  width:auto;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#111827;
+}
+.created-text{
+  font-size:14px;
+  line-height:22px;
+  color:#111827;
+}
+.created-heart{
+  font-size:18px;
+  line-height:24px;
+}
+
+/* Focus styles for accessibility */
+:focus-visible{
+  outline:2px solid var(--secondary);
+  outline-offset:2px;
+}
+
+/* Scale padding adjust */
+@media (max-width: 1400px){
+  #license-root{ padding:16px; }
+}

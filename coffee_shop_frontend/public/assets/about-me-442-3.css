@@ -1,0 +1,283 @@
+:root{
+  /* Ocean Professional theme */
+  --primary:#2563EB;
+  --secondary:#F59E0B;
+  --success:#F59E0B;
+  --error:#EF4444;
+  --bg:#f9fafb;
+  --surface:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --radius:16px;
+  --shadow:0 10px 24px rgba(17,24,39,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#about-root{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:24px;
+}
+
+/* Artboard matches Figma frame (1333 x 998) */
+.artboard{
+  position:relative;
+  width:1333px;
+  height:998px;
+  background:#fff;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+/* Top stripe (id 442:35) */
+.stripe{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1333px;
+  height:8px;
+  background:var(--primary);
+}
+
+/* Studio row (id 442:28) at x:112, y:100, width:1109, height:24 */
+.studio-row{
+  position:absolute;
+  left:112px;
+  top:100px;
+  width:1109px;
+  height:24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.studio-left{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.studio-text{
+  font-size:14px;          /* Approximates typo_97: 22px height block for 14-16px font */
+  line-height:22px;
+  color:#111827;
+  font-weight:500;
+}
+.studio-arrow{
+  width:24px;
+  height:24px;
+  display:block;
+}
+
+/* Headline & Logo (id 442:23): x:112, y:196, w:1109, h:149 */
+.headline-logo{
+  position:absolute;
+  left:112px;
+  top:196px;
+  width:1109px;
+  height:149px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:24px;
+}
+.headline-texts{
+  width:710px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.headline-title{
+  margin:0;
+  font-weight:800;
+  font-size:48px;         /* Figma block height 60 -> ~48px font */
+  line-height:60px;
+  letter-spacing:-0.02em;
+  color:#111827;
+}
+.headline-body{
+  margin:0;
+  width:710px;
+  font-size:16px;         /* aligns with typo_100 descriptive copy */
+  line-height:27px;
+  color:#374151;
+}
+.headline-logo-wrap{
+  width:84px;
+  height:84px;
+  margin-top:32.5px;      /* y:228.5 relative to frame y:196 => 32.5px offset */
+  display:block;
+  flex:0 0 auto;
+}
+.headline-logo-img{
+  width:84px;
+  height:84px;
+  display:block;
+  border-radius:16px;
+}
+
+/* Support section (id 442:10): x:112, y:441, w:710, h:197 */
+.support{
+  position:absolute;
+  left:112px;
+  top:441px;
+  width:710px;
+  height:197px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.support-texts{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.support-title{
+  margin:0;
+  font-size:24px;       /* typo_99 title weight */
+  line-height:31px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  color:#111827;
+}
+.support-subtitle{
+  margin:0;
+  font-size:16px;
+  line-height:27px;
+  color:#4b5563;
+}
+
+/* Buy Me A Coffee row (id 442:14): x:112,y:559,w:565,h:79 (but detail spans to 462 width) */
+.bmac.card{
+  position:absolute;
+  left:112px;
+  top:559px;
+  width:565px;
+  height:79px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+  background:var(--surface);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  text-decoration:none;
+  border:1px solid rgba(17,24,39,0.06);
+  transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.bmac.card:hover{
+  transform:translateY(-1px);
+  box-shadow:0 12px 28px rgba(17,24,39,0.12);
+  border-color:rgba(37,99,235,0.25);
+}
+.bmac-logo{
+  width:79px;
+  height:79px;
+  position:relative;
+  flex:0 0 79px;
+}
+.bmac-logo-bg{
+  position:absolute;
+  left:0;
+  top:0;
+  width:79px;
+  height:79px;
+  background:#F3F4F6;           /* style_110 approximation */
+  border-radius:12px;
+}
+.bmac-logo-icon{
+  position:absolute;
+  left:13px;  /* 125 - 112 */
+  top:13px;   /* 572 - 559 */
+  width:54px;
+  height:54px;
+  display:block;
+}
+.bmac-detail{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.bmac-title-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  height:29px;
+}
+.bmac-title{
+  font-size:20px;        /* typo_101 */
+  line-height:29px;
+  font-weight:700;
+  color:#111827;
+}
+.bmac-emoji{
+  font-size:20px;
+  line-height:24px;
+}
+.bmac-link{
+  font-size:16px;        /* typo_102 */
+  line-height:24px;
+  color:var(--primary);
+  text-decoration:underline;
+  word-break:break-all;
+}
+
+/* Hero image container (id 442:8): x:709, y:350, w:576, h:576 */
+.hero-figure{
+  position:absolute;
+  left:709px;
+  top:350px;
+  width:576px;
+  height:576px;
+  margin:0;
+}
+.hero-image{
+  width:576px;
+  height:576px;
+  display:block;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+
+/* Created by row (id 442:4): x:112,y:902,w:254,h:24 */
+.created-by{
+  position:absolute;
+  left:112px;
+  top:902px;
+  width:auto;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#111827;
+}
+.created-text{
+  font-size:14px;
+  line-height:22px;
+  color:#111827;
+}
+.created-heart{
+  font-size:18px;
+  line-height:24px;
+}
+
+/* Focus styles */
+:focus-visible{
+  outline:2px solid var(--secondary);
+  outline-offset:2px;
+}
+
+/* JS scaling will manage responsiveness; keep media minimal to avoid conflicts */
+@media (max-width: 1400px){
+  #about-root{padding:16px}
+}

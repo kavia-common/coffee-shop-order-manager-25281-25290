@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Feedback — Screen 442:132</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Product Feedback screen built from Figma screen 442:132 with pixel-perfect layout and assets." />
+  <link rel="stylesheet" href="./product-feedback-442-132.css" />
+</head>
+<body>
+  <main id="feedback-root" aria-label="Product Feedback screen">
+    <!-- Fixed-size artboard matching Figma: 1333 x 998 -->
+    <div class="artboard" role="group" aria-label="Artboard 1333x998">
+      <!-- Stripe (id 442:163) -->
+      <div class="stripe" aria-hidden="true"></div>
+
+      <!-- Studio Name (id 442:156) -->
+      <section class="studio-row" aria-label="Studio breadcrumb and handle">
+        <div class="studio-left" role="group" aria-label="Breadcrumb">
+          <span class="studio-text">Nam Design</span>
+          <div class="studio-arrow" role="img" aria-label="right arrow">
+            <!-- 442:160 imagePath -->
+            <img src="figmaimages/figma_image_442_160_d7fd388b.png" alt="Arrow right icon" class="arrow-img" />
+          </div>
+          <span class="studio-text">Feedback</span>
+        </div>
+        <div class="studio-right studio-text" aria-label="Handle">@namdesign</div>
+      </section>
+
+      <!-- Headline & Logo (id 442:151) -->
+      <section class="headline-logo" aria-labelledby="headline-title">
+        <div class="headline-texts">
+          <h1 id="headline-title" class="headline-title">Feedback</h1>
+          <p class="headline-body">
+            Thank you for downloading our digital product! We would love to hear your feedback so we can improve and create more products.
+          </p>
+        </div>
+        <div class="headline-logo-wrap">
+          <!-- Logo NAM Design (imagePath from JSON id 442:155) -->
+          <img class="headline-logo-img" src="figmaimages/figma_image_442_155_d45f2a45.png" alt="NAM Design logo" />
+        </div>
+      </section>
+
+      <!-- Detail (id 442:137) -->
+      <section class="detail" aria-labelledby="detail-title">
+        <h2 id="detail-title" class="detail-title">Give A Feedback</h2>
+
+        <!-- Form row (id 442:139) -->
+        <div class="form-row">
+          <!-- Feedback Icon (id 442:140 with children 442:141 bg, 442:142/143 icons) -->
+          <div class="feedback-icon" aria-hidden="true">
+            <div class="feedback-icon-bg"></div>
+            <!-- Render both layered images to match Figma -->
+            <img class="feedback-icon-img under" src="figmaimages/figma_image_442_142_e5073955.png" alt="" />
+            <img class="feedback-icon-img over" src="figmaimages/figma_image_442_143_3fcaefc5.png" alt="" />
+          </div>
+
+          <!-- Text (id 442:144) -->
+          <div class="form-text">
+            <div class="form-title-row">
+              <span class="form-title">Form</span>
+              <span class="form-emoji" role="img" aria-label="point down">👇</span>
+            </div>
+            <a class="form-link" href="https://wkf.ms/4awb2F6" target="_blank" rel="noopener noreferrer">
+              https://wkf.ms/4awb2F6
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Image (id 442:149 -> 442:150) -->
+      <figure class="hero-figure" aria-label="Hero Illustration">
+        <img
+          class="hero-image"
+          src="figmaimages/figma_image_442_150_adb89f3e.png"
+          alt="Saly 11 illustration"
+        />
+      </figure>
+
+      <!-- Created by (id 442:133 and its children) -->
+      <footer class="created-by" role="contentinfo" aria-label="Credits">
+        <span class="created-text">Create with</span>
+        <span class="created-heart" role="img" aria-label="heart">🖤</span>
+        <span class="created-text">by NAM Design</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="./product-feedback-442-132.js"></script>
+</body>
+</html>
